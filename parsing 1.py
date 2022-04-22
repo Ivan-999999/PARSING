@@ -42,7 +42,7 @@ def save_doc(items, path):
             writer.writerow( [item['title'], item['link_product'], item['brand'], item['card_img']])
 
 
-def parser():
+def parser(PAGENATION):
     PAGENATION = input('Укажите количество страниц для парсинга: ')
     PAGENATION = int(PAGENATION.strip())
     html = get_html(URL)
@@ -57,7 +57,7 @@ def parser():
     else:
         print('Error')
 
-parser()
+# parser()
 
 
 

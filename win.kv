@@ -1,0 +1,57 @@
+#:kivy 2.0
+
+<Win>:
+	id: r
+	size: 640,480
+	canvas:
+		Rectangle:
+			pos: 0,0
+			size: r.size
+	StackLayout:
+		id: layout
+		canvas:
+			Color: 
+				rgb: (0,0,0)
+			Rectangle:
+				pos: layout.pos
+				size: layout.size
+		size: r.size
+		pos: r.pos
+		padding: 5
+		spacing: 5
+		Label:
+			text:'Универсальный парсер'
+			bold: True
+			font_size: 25
+			size_hint: 1, .1
+		Label:
+			text: 'Ссылка для парсинга: '
+			size_hint: .6,.1
+		TextInput:
+			id: input
+			hint_text: 'Test'
+			size_hint: .35,.1
+		Label:
+			text: 'Атрибут: '
+			size_hint: .6,.1
+		TextInput:
+			id: input
+			hint_text: 'Test'
+			size_hint: .35,.1
+		Label:
+			text: 'Укажите количество страниц для парсинга: '
+			size_hint: .6,.1
+		TextInput:
+			id: input
+			hint_text: 'Test'
+			size_hint: .35,.1
+	AnchorLayout:
+		size: r.size[0], 100
+		anchor_x: 'right'
+		anchor_y: 'bottom'
+		padding: 20
+		Button:
+			text: 'Старт'
+			background_color: (1,.5,1)
+			background_down: ''
+			size_hint: .2,1
